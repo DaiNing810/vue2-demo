@@ -1,12 +1,12 @@
 import {make} from "vuex-pathify";
 
 const state = {
-    items: [
-        {id: 1, name: 'apple'},
-        {id: 2, name: 'IBM'},
+    page: 1,
+    pageSize: 20,
+    params: [
+        {field: 'name', value: 'DaiN'},
     ],
-    color: 'red',
-    person: {name: 'DaiN', age: 40}
+    sort: 'asc'
 }
 
 const mutations = make.mutations(state)

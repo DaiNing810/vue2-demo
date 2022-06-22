@@ -19,10 +19,15 @@ const getModules = () => {
   return modules;
 }
 
+const modules = getModules();
+
+// 打印出所有的模块配置
+console.log(modules);
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   plugins: [Pathify.plugin],
   ...root,
-  modules: getModules()
+  modules,
 })
